@@ -69,7 +69,7 @@ const PropertiesSection: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280')`
+            backgroundImage: `url('https://www.freepik.com/free-vector/elegant-white-wallpaper-with-golden-details_18268608.htm#fromView=keyword&page=1&position=0&uuid=8cec2e78-6ac0-4390-add5-9081ef5a52d4&query=White+luxury+background')`
           }}
         />
         
