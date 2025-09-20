@@ -145,7 +145,7 @@ const AboutSection: React.FC = () => {
               viewport={{ once: true }}
               className="font-display text-xl md:text-2xl font-light leading-relaxed tracking-wide italic drop-shadow-md"
             >
-              For fifteen years, we have curated the world's most exceptional properties
+              For over a decade, we have redefined luxury real estate through uncompromising standards and visionary curation
             </motion.p>
             
             <motion.div
@@ -163,9 +163,9 @@ const AboutSection: React.FC = () => {
               viewport={{ once: true }}
               className="font-body text-lg font-extralight leading-relaxed max-w-2xl mx-auto tracking-wide drop-shadow-sm"
             >
-              Each residence in our collection represents the pinnacle of luxury living, 
-              carefully selected for its architectural significance, prime location, 
-              and uncompromising quality.
+              Our portfolio encompasses only the most distinguished properties—each chosen for its 
+              architectural heritage, cultural significance, and ability to transcend the ordinary. 
+              We don't simply sell homes; we curate legacies.
             </motion.p>
           </div>
         </motion.div>

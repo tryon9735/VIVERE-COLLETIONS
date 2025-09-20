@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 2 }}
             className="font-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 mb-12 sm:mb-16 md:mb-20 font-light tracking-wider max-w-2xl mx-auto leading-relaxed drop-shadow-sm"
           >
-            Curated collection of the world's finest residences
+            Where architectural excellence meets uncompromising luxury in the world's most coveted addresses
           </motion.p>
 
           <motion.button
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             className="font-body px-8 sm:px-10 md:px-12 py-3 sm:py-4 border-2 border-white/80 text-white font-light tracking-[0.2em] hover:bg-white hover:text-gray-900 transition-all duration-500 text-xs sm:text-sm md:text-base uppercase"
           >
-            EXPLORE
+            DISCOVER EXCELLENCE
           </motion.button>
         </motion.div>
 

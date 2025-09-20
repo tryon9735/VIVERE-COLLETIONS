@@ -89,7 +89,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
                 {property.location}
               </span>
             </motion.div>
-
+              {/* Essential Details */}
             {/* Minimalist Stats */}
             <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex items-center space-x-1">
@@ -109,7 +109,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
         </motion.div>
       </motion.div>
 
-      {/* Minimalist Info Bar */}
+      {/* Property Summary */}
       <div className="p-4 bg-white border-t border-gray-100">
         <div className="flex items-center justify-between">
           <div>
@@ -128,12 +128,12 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
               {formatPrice(property.price, property.currency)}
             </div>
             <div className="text-xs text-gray-400 uppercase tracking-wider">
-              {property.status}
+              Available
             </div>
           </div>
         </div>
 
-        {/* Bottom Stats Bar */}
+        {/* Property Details */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -155,7 +155,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
             </span>
           </div>
           <div className="text-xs text-gray-400 uppercase tracking-wider">
-            View Details →
+            Explore →
           </div>
         </motion.div>
       </div>

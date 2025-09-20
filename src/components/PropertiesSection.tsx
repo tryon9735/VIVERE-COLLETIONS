@@ -146,8 +146,8 @@ const PropertiesSection: React.FC = () => {
               transition={{ duration: 1, delay: 3.5 }}
               className="font-body text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto tracking-wide"
             >
-              Discover a curated collection of the world's most extraordinary residences, 
-              where architectural mastery meets unparalleled luxury
+              Each residence represents the convergence of visionary design, prime location, 
+              and meticulous craftsmanship—defining the new standard of luxury living
             </motion.p>
           </motion.div>
         </div>
