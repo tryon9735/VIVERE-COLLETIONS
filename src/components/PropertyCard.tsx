@@ -29,7 +29,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
         transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }
       }}
       whileTap={{ scale: 0.98 }}
-      className="group cursor-pointer overflow-hidden relative bg-white shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-900"
+      className="group cursor-pointer overflow-hidden relative bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-champagne-gold"
     >
       {/* Image Container - Perfect Square */}
       <motion.div 
@@ -39,7 +39,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
         <motion.img
           src={property.image_url}
           alt={property.title}
-          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
           loading="lazy"
         />
         
@@ -47,19 +47,19 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
-          className="absolute inset-0 bg-black/40"
-          transition={{ duration: 0.3 }}
+          className="absolute inset-0 bg-deep-black/60"
+          transition={{ duration: 0.5 }}
         />
         
         {/* Type Badge - Top Right */}
-        <div className="absolute top-4 right-4 bg-white px-3 py-1 shadow-sm">
-          <span className="font-body text-gray-900 text-xs font-medium tracking-wider uppercase">
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 shadow-sm">
+          <span className="font-body text-deep-black text-xs font-medium tracking-wider uppercase">
             {property.type}
           </span>
         </div>
 
         {/* Price Badge - Top Left */}
-        <div className="absolute top-4 left-4 bg-black text-white px-3 py-1">
+        <div className="absolute top-4 left-4 bg-champagne-gold text-white px-3 py-1">
           <span className="font-display text-sm font-light tracking-wide">
             {formatPrice(property.price, property.currency)}
           </span>
@@ -70,7 +70,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileHover={{ opacity: 1, scale: 1 }}
           className="absolute inset-0 flex items-center justify-center text-white z-10"
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="text-center">
             <motion.h3 
@@ -89,7 +89,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
                 {property.location}
               </span>
             </motion.div>
-              {/* Essential Details */}
+            
             {/* Minimalist Stats */}
             <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex items-center space-x-1">
@@ -113,18 +113,24 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
       <div className="p-4 bg-white border-t border-gray-100">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-display text-lg font-light text-gray-900 tracking-wide truncate">
+            <h3 className="font-display text-lg font-light text-deep-black tracking-wide truncate">
               {property.title}
             </h3>
             <div className="flex items-center space-x-1 mt-1">
-              <MapPin className="w-3 h-3 text-gray-400" />
-              <span className="font-body text-xs text-gray-500 tracking-wide">
+              <MapPin className="w-3 h-3 text-luxury-gray" />
+              <span className="font-body text-xs text-luxury-gray tracking-wide">
                 {property.location}
+              </span>
+            </div>
+            {/* Broker Credit */}
+            <div className="mt-1">
+              <span className="font-body text-xs text-gray-400 italic tracking-wide">
+                {property.agent_name}
               </span>
             </div>
           </div>
           <div className="text-right">
-            <div className="font-display text-lg font-light text-gray-900">
+            <div className="font-display text-lg font-light text-deep-black">
               {formatPrice(property.price, property.currency)}
             </div>
             <div className="text-xs text-gray-400 uppercase tracking-wider">
@@ -154,7 +160,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
               <span>{property.area}m²</span>
             </span>
           </div>
-          <div className="text-xs text-gray-400 uppercase tracking-wider">
+          <div className="text-xs text-champagne-gold uppercase tracking-wider group-hover:text-champagne-gold transition-colors duration-300">
             Explore →
           </div>
         </motion.div>

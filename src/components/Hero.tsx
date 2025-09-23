@@ -56,13 +56,13 @@ const Hero: React.FC = () => {
           <motion.h1 
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-light text-white mb-6 sm:mb-8 md:mb-12 tracking-tight leading-none"
           >
-            {displayedText}
+            Curating Extraordinary Residences
             <motion.span
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
               className="inline-block ml-2"
             >
-              |
+              
             </motion.span>
           </motion.h1>
           
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 2 }}
             className="font-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 mb-12 sm:mb-16 md:mb-20 font-light tracking-wider max-w-2xl mx-auto leading-relaxed drop-shadow-sm"
           >
-            Where architectural excellence meets uncompromising luxury in the world's most coveted addresses
+            Exceptional properties selected for discerning collectors who appreciate architectural mastery and timeless elegance
           </motion.p>
 
           <motion.button
@@ -81,9 +81,9 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 2.5 }}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="font-body px-8 sm:px-10 md:px-12 py-3 sm:py-4 border-2 border-white/80 text-white font-light tracking-[0.2em] hover:bg-white hover:text-gray-900 transition-all duration-500 text-xs sm:text-sm md:text-base uppercase"
+            className="font-body px-8 sm:px-10 md:px-12 py-3 sm:py-4 border-2 border-white/80 text-white font-light tracking-[0.2em] hover:bg-champagne-gold hover:text-deep-black hover:border-champagne-gold transition-all duration-500 text-xs sm:text-sm md:text-base uppercase"
           >
-            DISCOVER EXCELLENCE
+            VIEW COLLECTION
           </motion.button>
         </motion.div>
 

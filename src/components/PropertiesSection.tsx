@@ -62,48 +62,11 @@ const PropertiesSection: React.FC = () => {
   }
 
   return (
-    <section id="properties" className="min-h-screen relative overflow-hidden">
+    <section id="properties" className="min-h-screen bg-white relative overflow-hidden">
+      {/* VIVERE Watermark */}
+      <div className="vivere-watermark">V</div>
+      
       {/* Cinematic Background */}
-      <div className="absolute inset-0 z-0">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: `url('https://www.freepik.com/free-vector/elegant-white-wallpaper-with-golden-details_18268608.htm#fromView=keyword&page=1&position=0&uuid=8cec2e78-6ac0-4390-add5-9081ef5a52d4&query=White+luxury+background')`
-          }}
-        />
-        
-        {/* Sophisticated Overlay System */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
-        
-        {/* Transition gradient to Excellence section */}
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-black via-black/80 to-transparent" />
-        
-        {/* Animated Particles */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-white/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: 8 + Math.random() * 4,
-                repeat: Infinity,
-                delay: Math.random() * 8,
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </div>
-      </div>
 
       {/* Content Layer */}
       <div className="relative z-10 min-h-screen">
@@ -117,19 +80,19 @@ const PropertiesSection: React.FC = () => {
             className="max-w-6xl mx-auto px-6"
           >
             <motion.h2 
-              className="font-display text-7xl md:text-9xl font-light text-white mb-8 tracking-tight leading-none"
+              className="font-display text-7xl md:text-9xl font-light text-deep-black mb-8 tracking-tight leading-none"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 2, delay: 2 }}
             >
-              Exceptional
+              Curated
               <motion.span 
                 className="block italic text-6xl md:text-8xl mt-4"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 2.5 }}
               >
-                Properties
+                Collection
               </motion.span>
             </motion.h2>
             
@@ -137,17 +100,17 @@ const PropertiesSection: React.FC = () => {
               initial={{ width: 0 }}
               animate={{ width: '200px' }}
               transition={{ duration: 2, delay: 3 }}
-              className="h-px bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-12"
+              className="h-px bg-gradient-to-r from-transparent via-champagne-gold to-transparent mx-auto mb-12"
             />
             
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 3.5 }}
-              className="font-body text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto tracking-wide"
+              className="font-body text-xl md:text-2xl text-luxury-gray font-light leading-relaxed max-w-3xl mx-auto tracking-wide"
             >
-              Each residence represents the convergence of visionary design, prime location, 
-              and meticulous craftsmanship—defining the new standard of luxury living
+              Each residence in our collection represents architectural excellence, 
+              prime location, and uncompromising quality—curated for the most discerning collectors
             </motion.p>
           </motion.div>
         </div>
@@ -159,7 +122,7 @@ const PropertiesSection: React.FC = () => {
           transition={{ duration: 1, delay: 4 }}
           className="flex justify-center mb-20 px-6"
         >
-          <div className="backdrop-blur-2xl bg-white/5 border border-white/10 p-2">
+          <div className="bg-white border border-gray-100 shadow-sm p-2">
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category, index) => (
                 <motion.button
@@ -180,14 +143,14 @@ const PropertiesSection: React.FC = () => {
                   onClick={() => handleCategoryChange(category.id)}
                   className={`relative px-8 py-4 font-body text-sm font-medium tracking-wider transition-all duration-500 overflow-hidden group ${
                     selectedCategory === category.id
-                      ? 'text-black bg-white shadow-2xl border border-white'
-                      : 'text-white/80 hover:text-white bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40'
+                      ? 'text-white bg-champagne-gold shadow-lg border border-champagne-gold'
+                      : 'text-luxury-gray hover:text-champagne-gold bg-white hover:bg-champagne-gold/5 border border-gray-200 hover:border-champagne-gold/40'
                   }`}
                 >
                   {/* Background Effects */}
                   {selectedCategory !== category.id && (
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0"
+                      className="absolute inset-0 bg-gradient-to-r from-champagne-gold/0 via-champagne-gold/10 to-champagne-gold/0"
                       initial={{ x: '-100%' }}
                       whileHover={{ x: '100%' }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -198,8 +161,8 @@ const PropertiesSection: React.FC = () => {
                     <span className="uppercase">{category.label}</span>
                     <span className={`text-xs px-2 py-1 rounded-full ${
                       selectedCategory === category.id 
-                        ? 'bg-black/10 text-black/60' 
-                        : 'bg-white/10 text-white/60'
+                        ? 'bg-white/20 text-white/80' 
+                        : 'bg-gray-100 text-luxury-gray'
                     }`}>
                       {category.count}
                     </span>
@@ -233,7 +196,7 @@ const PropertiesSection: React.FC = () => {
                   }}
                   className="group"
                 >
-                  <div className="backdrop-blur-sm bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-500 hover:bg-white/10">
+                  <div className="bg-white border border-gray-100 hover:border-champagne-gold/30 transition-all duration-500 hover:shadow-lg">
                     <PropertyCard property={property} index={index} />
                   </div>
                 </motion.div>
@@ -257,11 +220,11 @@ const PropertiesSection: React.FC = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleLoadMore}
-                className="backdrop-blur-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 px-12 py-4 font-body font-medium tracking-wider transition-all duration-500 text-sm uppercase group"
+                className="bg-white hover:bg-champagne-gold text-deep-black hover:text-white border border-gray-200 hover:border-champagne-gold px-12 py-4 font-body font-medium tracking-wider transition-all duration-500 text-sm uppercase group shadow-sm hover:shadow-lg"
               >
-                <span className="relative z-10">Discover More</span>
+                <span className="relative z-10">View More</span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0"
+                  className="absolute inset-0 bg-gradient-to-r from-champagne-gold/0 via-champagne-gold/10 to-champagne-gold/0"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '100%' }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -272,7 +235,7 @@ const PropertiesSection: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="font-body text-white/60 font-light text-sm tracking-wider mt-6"
+                className="font-body text-luxury-gray font-light text-sm tracking-wider mt-6"
               >
               </motion.p>
             </motion.div>
@@ -286,11 +249,11 @@ const PropertiesSection: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center py-32"
             >
-              <div className="backdrop-blur-xl bg-white/5 border border-white/10 p-12 max-w-md mx-auto">
-                <p className="font-body text-white/80 font-light tracking-wider text-lg">
+              <div className="bg-white border border-gray-100 shadow-sm p-12 max-w-md mx-auto">
+                <p className="font-body text-luxury-gray font-light tracking-wider text-lg">
                   No properties found in this category
                 </p>
-                <p className="font-body text-white/60 font-light text-sm tracking-wider mt-4">
+                <p className="font-body text-gray-400 font-light text-sm tracking-wider mt-4">
                   Please try a different filter
                 </p>
               </div>
@@ -298,33 +261,8 @@ const PropertiesSection: React.FC = () => {
           )}
         </div>
 
-        {/* Enhanced Bottom Transition to Excellence */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        >
-          {/* Multi-layer gradient for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
-        </motion.div>
       </div>
 
-      {/* Cinematic Bridge to Excellence Section */}
-      <div className="relative h-24 bg-gradient-to-b from-transparent to-black">
-        <motion.div
-          initial={{ opacity: 0, scale: 1.1 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 3, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="absolute inset-0"
-        >
-          {/* Sophisticated overlay system */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black" />
-        </motion.div>
-      </div>
     </section>
   );
 };
