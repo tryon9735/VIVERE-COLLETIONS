@@ -46,8 +46,8 @@ const Header: React.FC = () => {
             onClick={() => navigate('/')}
             className="cursor-pointer"
           >
-            <h1 className="font-display text-2xl font-light tracking-[0.3em] text-deep-black">
-              VIVERE Collections
+            <h1 className="font-display text-2xl font-light tracking-[0.3em] text-gray-900">
+              LUXE
             </h1>
           </motion.div>
 
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
                 href={`#${item.toLowerCase()}`}
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="font-body text-luxury-gray hover:text-champagne-gold font-light tracking-wider transition-colors duration-300 text-sm uppercase"
+                className="font-body text-gray-600 hover:text-gray-900 font-extralight tracking-wider transition-colors duration-300 text-sm uppercase"
               >
                 {item}
               </motion.a>
