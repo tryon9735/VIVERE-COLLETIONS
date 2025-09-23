@@ -205,7 +205,7 @@ const AboutSection: React.FC = () => {
               <div className="flex items-center justify-center space-x-3">
                 <Mail className="w-4 h-4 text-white/70" />
                 <span className="font-body text-white/90 font-extralight tracking-wider text-sm drop-shadow-sm">
-                  contact@vivere.com
+                  contact@luxe.com
                 </span>
               </div>
               <div className="flex items-center justify-center space-x-3">
@@ -220,7 +220,7 @@ const AboutSection: React.FC = () => {
           {/* Copyright */}
           <div className="text-center md:text-right">
             <p className="font-body text-white/70 font-extralight text-sm tracking-wider drop-shadow-sm">
-              © {currentYear} VIVERE Collections. All rights reserved.
+              © {currentYear} Luxe. All rights reserved.
             </p>
             <p className="font-body text-white/70 font-extralight text-sm tracking-wider mt-1 drop-shadow-sm">
               Licensed Real Estate Broker

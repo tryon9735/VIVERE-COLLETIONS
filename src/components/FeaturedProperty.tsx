@@ -34,9 +34,6 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
 
   return (
     <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-      {/* VIVERE Watermark */}
-      <div className="vivere-watermark">V</div>
-      
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Section Header */}
         <motion.div
@@ -47,7 +44,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
           className="text-center mb-16 md:mb-24"
         >
           <motion.h2 
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-light text-deep-black mb-6 tracking-tight"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-6 tracking-tight"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -62,7 +59,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
               viewport={{ once: true }}
-              className="font-body text-lg md:text-xl text-luxury-gray font-light tracking-wide max-w-2xl mx-auto"
+              className="font-body text-lg md:text-xl text-gray-600 font-light tracking-wide max-w-2xl mx-auto"
             >
               {subtitle}
             </motion.p>
@@ -73,7 +70,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
             whileInView={{ width: '120px' }}
             transition={{ duration: 1.5, delay: 0.6 }}
             viewport={{ once: true }}
-              className="h-px bg-champagne-gold mx-auto mt-8"
+            className="h-px bg-gray-300 mx-auto mt-8"
           />
         </motion.div>
 
@@ -108,7 +105,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
               />
               
               {/* Price badge */}
-              <div className="absolute top-6 left-6 bg-champagne-gold text-white px-4 py-2">
+              <div className="absolute top-6 left-6 bg-black text-white px-4 py-2">
                 <span className="font-display text-lg font-light tracking-wide">
                   {formatPrice(property.price, property.currency)}
                 </span>
@@ -121,7 +118,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
                 transition={{ duration: 0.3 }}
                 className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm p-3 rounded-full"
               >
-                <ArrowRight className="w-5 h-5 text-deep-black" />
+                <ArrowRight className="w-5 h-5 text-gray-900" />
               </motion.div>
             </motion.div>
           </motion.div>
@@ -137,7 +134,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
             {/* Title and Location */}
             <div>
               <motion.h3 
-                className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-black mb-4 tracking-tight"
+                className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-4 tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
@@ -153,8 +150,8 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
                 transition={{ duration: 0.8, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                <MapPin className="w-5 h-5 text-luxury-gray" />
-                <span className="font-body text-lg text-luxury-gray font-light tracking-wide">
+                <MapPin className="w-5 h-5 text-gray-400" />
+                <span className="font-body text-lg text-gray-600 font-light tracking-wide">
                   {property.location}, {property.country}
                 </span>
               </motion.div>
@@ -166,7 +163,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
-              className="font-body text-lg text-luxury-gray font-light leading-relaxed tracking-wide"
+              className="font-body text-lg text-gray-600 font-light leading-relaxed tracking-wide"
             >
               {property.description}
             </motion.p>
@@ -180,24 +177,24 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
               <div className="text-center">
-                <Bed className="w-6 h-6 text-luxury-gray mx-auto mb-2" />
-                <div className="font-display text-2xl font-light text-deep-black">{property.bedrooms}</div>
-                <div className="font-body text-sm text-luxury-gray uppercase tracking-wider">Bedrooms</div>
+                <Bed className="w-6 h-6 text-gray-400 mx-auto mb-2" />
+                <div className="font-display text-2xl font-light text-gray-900">{property.bedrooms}</div>
+                <div className="font-body text-sm text-gray-500 uppercase tracking-wider">Bedrooms</div>
               </div>
               <div className="text-center">
-                <Bath className="w-6 h-6 text-luxury-gray mx-auto mb-2" />
-                <div className="font-display text-2xl font-light text-deep-black">{property.bathrooms}</div>
-                <div className="font-body text-sm text-luxury-gray uppercase tracking-wider">Bathrooms</div>
+                <Bath className="w-6 h-6 text-gray-400 mx-auto mb-2" />
+                <div className="font-display text-2xl font-light text-gray-900">{property.bathrooms}</div>
+                <div className="font-body text-sm text-gray-500 uppercase tracking-wider">Bathrooms</div>
               </div>
               <div className="text-center">
-                <Square className="w-6 h-6 text-luxury-gray mx-auto mb-2" />
-                <div className="font-display text-2xl font-light text-deep-black">{property.area}</div>
-                <div className="font-body text-sm text-luxury-gray uppercase tracking-wider">SQ M</div>
+                <Square className="w-6 h-6 text-gray-400 mx-auto mb-2" />
+                <div className="font-display text-2xl font-light text-gray-900">{property.area}</div>
+                <div className="font-body text-sm text-gray-500 uppercase tracking-wider">SQ M</div>
               </div>
               <div className="text-center">
-                <div className="w-6 h-6 bg-luxury-gray rounded mx-auto mb-2" />
-                <div className="font-display text-2xl font-light text-deep-black">{property.year_built}</div>
-                <div className="font-body text-sm text-luxury-gray uppercase tracking-wider">Built</div>
+                <div className="w-6 h-6 bg-gray-400 rounded mx-auto mb-2" />
+                <div className="font-display text-2xl font-light text-gray-900">{property.year_built}</div>
+                <div className="font-body text-sm text-gray-500 uppercase tracking-wider">Built</div>
               </div>
             </motion.div>
 
@@ -210,14 +207,14 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h4 className="font-display text-xl font-light text-deep-black tracking-wide">
+                <h4 className="font-display text-xl font-light text-gray-900 tracking-wide">
                   Distinguished Features
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {property.features.slice(0, 6).map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-champagne-gold rounded-full" />
-                      <span className="font-body text-luxury-gray font-light tracking-wide text-sm">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
+                      <span className="font-body text-gray-600 font-light tracking-wide text-sm">
                         {feature}
                       </span>
                     </div>
@@ -226,18 +223,6 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
               </motion.div>
             )}
 
-            {/* Broker Credit */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.15 }}
-              viewport={{ once: true }}
-              className="pt-4 border-t border-gray-100"
-            >
-              <span className="font-body text-sm text-gray-400 italic tracking-wide">
-                Presented by {property.agent_name}
-              </span>
-            </motion.div>
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -250,10 +235,10 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
                 onClick={handleViewProperty}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="font-body px-8 py-4 border border-deep-black text-deep-black font-light tracking-[0.2em] hover:bg-champagne-gold hover:text-white hover:border-champagne-gold transition-all duration-500 text-sm uppercase group"
+                className="font-body px-8 py-4 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white transition-all duration-500 text-sm uppercase group"
               >
                 <span className="flex items-center space-x-3">
-                  <span>View Details</span>
+                  <span>Explore Property</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </motion.button>

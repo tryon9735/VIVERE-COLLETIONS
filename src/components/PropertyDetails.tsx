@@ -58,9 +58,9 @@ const PropertyDetails: React.FC = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         onClick={() => navigate('/')}
-        className="fixed top-8 left-8 z-50 p-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl hover:bg-champagne-gold/10 transition-all duration-300"
+        className="fixed top-8 left-8 z-50 p-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       >
-        <ArrowLeft className="w-6 h-6 text-deep-black" />
+        <ArrowLeft className="w-6 h-6 text-gray-900" />
       </motion.button>
 
       {/* Hero Image */}
@@ -125,7 +125,7 @@ const PropertyDetails: React.FC = () => {
               initial={{ width: 0 }}
               animate={{ width: '80px' }}
               transition={{ duration: 1.5, delay: 0.8 }}
-              className="h-px bg-champagne-gold mx-auto mb-20"
+              className="h-px bg-gray-300 mx-auto mb-20"
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
@@ -244,44 +244,44 @@ const PropertyDetails: React.FC = () => {
                 initial={{ width: 0 }}
                 animate={{ width: '100px' }}
                 transition={{ duration: 1, delay: 0.6 }}
-                className="h-px bg-champagne-gold mb-12"
+                className="h-px bg-gray-300 mb-12"
               />
               
-              <h2 className="font-display text-4xl font-light text-deep-black mb-8 tracking-wide">
+              <h2 className="font-display text-4xl font-light text-gray-900 mb-8 tracking-wide">
                 Details
               </h2>
               
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex items-center space-x-4">
-                  <Bed className="w-6 h-6 text-luxury-gray" />
-                  <span className="font-body text-luxury-gray font-light tracking-wide">{property.bedrooms} Bedrooms</span>
+                  <Bed className="w-6 h-6 text-gray-400" />
+                  <span className="font-body text-gray-600 font-light tracking-wide">{property.bedrooms} Bedrooms</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <Bath className="w-6 h-6 text-luxury-gray" />
-                  <span className="font-body text-luxury-gray font-light tracking-wide">{property.bathrooms} Bathrooms</span>
+                  <Bath className="w-6 h-6 text-gray-400" />
+                  <span className="font-body text-gray-600 font-light tracking-wide">{property.bathrooms} Bathrooms</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <Square className="w-6 h-6 text-luxury-gray" />
-                  <span className="font-body text-luxury-gray font-light tracking-wide">{property.area}m²</span>
+                  <Square className="w-6 h-6 text-gray-400" />
+                  <span className="font-body text-gray-600 font-light tracking-wide">{property.area}m²</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <Car className="w-6 h-6 text-luxury-gray" />
-                  <span className="font-body text-luxury-gray font-light tracking-wide">{property.cars} Cars</span>
+                  <Car className="w-6 h-6 text-gray-400" />
+                  <span className="font-body text-gray-600 font-light tracking-wide">{property.cars} Cars</span>
                 </div>
                 {property.year_built && (
                   <div className="flex items-center space-x-4">
-                    <Calendar className="w-6 h-6 text-luxury-gray" />
-                    <span className="font-body text-luxury-gray font-light tracking-wide">{property.year_built}</span>
+                    <Calendar className="w-6 h-6 text-gray-400" />
+                    <span className="font-body text-gray-600 font-light tracking-wide">{property.year_built}</span>
                   </div>
                 )}
               </div>
             </div>
 
             <div>
-              <h3 className="font-display text-2xl font-light text-deep-black mb-6 tracking-wide">
+              <h3 className="font-display text-2xl font-light text-gray-900 mb-6 tracking-wide">
                 Description
               </h3>
-              <p className="font-body text-luxury-gray font-light leading-relaxed text-lg tracking-wide">
+              <p className="font-body text-gray-600 font-light leading-relaxed text-lg tracking-wide">
                 {property.description}
               </p>
             </div>
@@ -289,14 +289,14 @@ const PropertyDetails: React.FC = () => {
             {/* Features */}
             {property.features && property.features.length > 0 && (
               <div>
-                <h3 className="font-display text-2xl font-light text-deep-black mb-6 tracking-wide">
+                <h3 className="font-display text-2xl font-light text-gray-900 mb-6 tracking-wide">
                   Features
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {property.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-1 h-1 bg-champagne-gold rounded-full" />
-                      <span className="font-body text-luxury-gray font-light tracking-wide text-sm">{feature}</span>
+                      <div className="w-1 h-1 bg-gray-400 rounded-full" />
+                      <span className="font-body text-gray-600 font-light tracking-wide text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -304,12 +304,12 @@ const PropertyDetails: React.FC = () => {
             )}
 
             <div>
-              <h3 className="font-display text-2xl font-light text-deep-black mb-6 tracking-wide">
+              <h3 className="font-display text-2xl font-light text-gray-900 mb-6 tracking-wide">
                 Location
               </h3>
               <div className="flex items-center space-x-4">
-                <MapPin className="w-6 h-6 text-luxury-gray" />
-                <span className="font-body text-luxury-gray font-light text-lg tracking-wide">{property.location}, {property.country}</span>
+                <MapPin className="w-6 h-6 text-gray-400" />
+                <span className="font-body text-gray-600 font-light text-lg tracking-wide">{property.location}, {property.country}</span>
               </div>
             </div>
           </motion.div>
@@ -330,7 +330,7 @@ const PropertyDetails: React.FC = () => {
               >
                 <motion.p 
                   layoutId={`property-price-${property.id}`}
-                  className="font-display text-6xl md:text-8xl font-light text-deep-black tracking-tight"
+                  className="font-display text-6xl md:text-8xl font-light text-gray-900 tracking-tight"
                 >
                   {formatPrice(property.price, property.currency)}
                 </motion.p>
@@ -342,7 +342,7 @@ const PropertyDetails: React.FC = () => {
                 transition={{ duration: 1, delay: 1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="font-body px-16 py-6 border border-deep-black text-deep-black font-light tracking-[0.2em] hover:bg-champagne-gold hover:text-white hover:border-champagne-gold transition-all duration-500 text-sm uppercase"
+                className="font-body px-16 py-6 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white transition-all duration-500 text-sm uppercase"
               >
                 INQUIRE
               </motion.button>
@@ -354,20 +354,14 @@ const PropertyDetails: React.FC = () => {
               transition={{ duration: 1, delay: 1.2 }}
               className="border-t border-gray-200 pt-16"
             >
-              <h3 className="font-display text-2xl font-light text-deep-black mb-6 tracking-wide">
+              <h3 className="font-display text-2xl font-light text-gray-900 mb-6 tracking-wide">
                 Contact
               </h3>
-              <div className="space-y-4 text-luxury-gray font-body font-light tracking-wide">
+              <div className="space-y-4 text-gray-600 font-body font-light tracking-wide">
                 <p>{property.agent_name}</p>
                 <p>{property.agent_phone}</p>
                 <p>{property.agent_email}</p>
                 <p>Private Viewing Available</p>
-                {/* Broker Credit */}
-                <div className="pt-4 border-t border-gray-100">
-                  <span className="font-body text-sm text-gray-400 italic tracking-wide">
-                    Exclusively represented by {property.agent_name}
-                  </span>
-                </div>
               </div>
             </motion.div>
           </motion.div>
