@@ -342,7 +342,7 @@ const PropertyDetails: React.FC = () => {
                 transition={{ duration: 1, delay: 1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="font-body px-16 py-6 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white transition-all duration-500 text-sm uppercase"
+                className="font-body px-16 py-6 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-500 text-sm uppercase"
               >
                 INQUIRE
               </motion.button>

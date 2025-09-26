@@ -154,7 +154,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
               <span>{property.area}m²</span>
             </span>
           </div>
-          <div className="text-xs text-gray-400 uppercase tracking-wider">
+          <div className="text-xs text-gray-400 uppercase tracking-wider group-hover:text-gray-600 transition-colors duration-300">
             Explore →
           </div>
         </motion.div>
