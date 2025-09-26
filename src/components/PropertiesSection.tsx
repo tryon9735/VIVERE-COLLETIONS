@@ -159,7 +159,7 @@ const PropertiesSection: React.FC = () => {
           transition={{ duration: 1, delay: 4 }}
           className="flex justify-center mb-20 px-6"
         >
-          <div className="backdrop-blur-2xl bg-white/5 border border-white/10 p-2">
+          <div className="">
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category, index) => (
                 <motion.button
@@ -297,19 +297,6 @@ const PropertiesSection: React.FC = () => {
             </motion.div>
           )}
         </div>
-
-        {/* Enhanced Bottom Transition to Excellence */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        >
-          {/* Multi-layer gradient for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
-        </motion.div>
       </div>
 
       {/* Cinematic Bridge to Excellence Section */}
