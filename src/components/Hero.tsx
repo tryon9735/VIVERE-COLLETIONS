@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 2.5 }}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="font-body px-8 sm:px-10 md:px-12 py-3 sm:py-4 border-2 border-white/80 text-white font-light tracking-[0.2em] hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-500 text-xs sm:text-sm md:text-base uppercase"
+            className="font-body px-8 sm:px-10 md:px-12 py-3 sm:py-4 border-2 border-white/80 text-white font-light tracking-[0.2em] hover:bg-white hover:text-gray-900 transition-all duration-500 text-xs sm:text-sm md:text-base uppercase"
           >
             DISCOVER EXCELLENCE
           </motion.button>

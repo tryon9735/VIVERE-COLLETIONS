@@ -235,7 +235,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({
                 onClick={handleViewProperty}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="font-body px-8 py-4 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-500 text-sm uppercase group"
+                className="font-body px-8 py-4 border border-gray-900 text-gray-900 font-light tracking-[0.2em] hover:bg-gray-900 hover:text-white transition-all duration-500 text-sm uppercase group"
               >
                 <span className="flex items-center space-x-3">
                   <span>Explore Property</span>

@@ -58,7 +58,7 @@ const Header: React.FC = () => {
                 href={`#${item.toLowerCase()}`}
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="font-body text-gray-900 hover:text-gray-600 font-extralight tracking-wider transition-colors duration-300 text-sm uppercase"
+                className="font-body text-gray-600 hover:text-gray-900 font-extralight tracking-wider transition-colors duration-300 text-sm uppercase"
               >
                 {item}
               </motion.a>

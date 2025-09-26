@@ -159,7 +159,7 @@ const PropertiesSection: React.FC = () => {
           transition={{ duration: 1, delay: 4 }}
           className="flex justify-center mb-20 px-6"
         >
-          <div className="">
+          <div className="backdrop-blur-2xl bg-white/5 border border-white/10 p-2">
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category, index) => (
                 <motion.button
@@ -180,7 +180,7 @@ const PropertiesSection: React.FC = () => {
                   onClick={() => handleCategoryChange(category.id)}
                   className={`relative px-8 py-4 font-body text-sm font-medium tracking-wider transition-all duration-500 overflow-hidden group ${
                     selectedCategory === category.id
-                      ? 'text-gray-900 bg-white shadow-2xl border border-white'
+                      ? 'text-black bg-white shadow-2xl border border-white'
                       : 'text-white/80 hover:text-white bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40'
                   }`}
                 >
@@ -198,7 +198,7 @@ const PropertiesSection: React.FC = () => {
                     <span className="uppercase">{category.label}</span>
                     <span className={`text-xs px-2 py-1 rounded-full ${
                       selectedCategory === category.id 
-                        ? 'bg-gray-900/10 text-gray-900/60' 
+                        ? 'bg-black/10 text-black/60' 
                         : 'bg-white/10 text-white/60'
                     }`}>
                       {category.count}
@@ -253,11 +253,11 @@ const PropertiesSection: React.FC = () => {
                 whileHover={{ 
                   scale: 1.05, 
                   y: -5,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+                  boxShadow: "0 20px 40px rgba(255,255,255,0.1)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleLoadMore}
-                className="backdrop-blur-xl bg-white/10 hover:bg-white hover:text-gray-900 text-white border border-white/20 hover:border-white px-12 py-4 font-body font-medium tracking-wider transition-all duration-500 text-sm uppercase group"
+                className="backdrop-blur-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 px-12 py-4 font-body font-medium tracking-wider transition-all duration-500 text-sm uppercase group"
               >
                 <span className="relative z-10">Discover More</span>
                 <motion.div
@@ -297,6 +297,19 @@ const PropertiesSection: React.FC = () => {
             </motion.div>
           )}
         </div>
+
+        {/* Enhanced Bottom Transition to Excellence */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        >
+          {/* Multi-layer gradient for smooth transition */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
+        </motion.div>
       </div>
 
       {/* Cinematic Bridge to Excellence Section */}

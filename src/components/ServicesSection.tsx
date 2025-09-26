@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
         >
           <h2 className="text-4xl md:text-6xl font-light text-white mb-6">
             Premium
-            <span className="block text-gray-300 font-bold">
+            <span className="block bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent font-bold">
               Services
             </span>
           </h2>
@@ -81,13 +81,13 @@ const ServicesSection: React.FC = () => {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-gray-400/25 transition-all duration-500"
+                className="w-16 h-16 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-amber-400/25 transition-all duration-500"
               >
-                <service.icon className="w-8 h-8 text-gray-900" />
+                <service.icon className="w-8 h-8 text-slate-900" />
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-gray-300 transition-colors duration-300">
+              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-amber-400 transition-colors duration-300">
                 {service.title}
               </h3>
 
@@ -100,14 +100,14 @@ const ServicesSection: React.FC = () => {
               <div className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
+                    <div className="w-1.5 h-1.5 bg-amber-400 rounded-full" />
                     <span className="text-gray-400 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-400/5 to-gray-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-400/5 to-yellow-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </div>
@@ -121,9 +121,9 @@ const ServicesSection: React.FC = () => {
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
+            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(212, 175, 55, 0.4)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-gray-200 text-gray-900 font-semibold rounded-lg text-lg transition-all duration-300 hover:shadow-2xl hover:bg-white"
+            className="px-10 py-4 bg-gradient-to-r from-amber-400 to-yellow-600 text-slate-900 font-semibold rounded-lg text-lg transition-all duration-300 hover:shadow-2xl"
           >
             Schedule Consultation
           </motion.button>
